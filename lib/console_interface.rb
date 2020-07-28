@@ -1,21 +1,17 @@
+require 'colorize'
+
 class ConsoleInterface
-  FIGURES =
-      Dir[__dir__ + '/../data/figures/*.txt'].
-      sort.
-      map { |file_name| File.read(file_name) }
+  FIGURES = Dir[__dir__ + '/../data/figures/*.txt'].sort.map { |file_name| File.read(file_name) }
 
   def initialize(game)
     @game = game
   end
 
   def print_out
-    puts <<~END
-      Слово: #{word_to_show}
-      #{figure}
-      Ошибки (#{@game.errors_made}): #{errors_to_show}
-      У вас осталось ошибок: #{@game.errors_allowed}
-
-    END
+    puts "Слово: #{word_to_show}".colorize(:green)
+    puts "#{figure}".colorize(:yellow)
+    puts "Ошибки (#{@game.errors_made}): #{errors_to_show}"
+    puts "У вас осталось ошибок: #{@game.errors_allowed}".colorize(:red)
 
     if @game.won?
       puts "Поздравляем, вы выиграли!"
@@ -42,11 +38,11 @@ class ConsoleInterface
   end
 
   def errors_to_show
-    return @game.errors.join(', ')
+    return @game.errors.join(', ').colorize(:red)
   end
 
   def get_input
-    print "Введите следующую букву: "
+    print "Введите следующую букву: ".colorize(:white)
     letter = gets[0].upcase
     return letter
   end

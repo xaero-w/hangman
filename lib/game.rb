@@ -69,6 +69,6 @@ class Game
   end
 
   def word
-    normalize_letter.join
+    @letters.join
   end
 end
