@@ -5,7 +5,7 @@ class Game
     @letters = word.chars
     @user_guesses = []
   end
-  #--/--
+
   def normalize_letter(letter) # Заменяет букву ввода пользователя
     if letter == "Й"
       "И"
