@@ -3,14 +3,14 @@
 
 ## Требования
 
-ruby 2.7.1
+- ruby 2.7.1
 
 
 ## Как установить игру
 
-bundle install
+- `bundle install`
 
-ruby main.rb
+- `bundle exec ruby main.rb`
 
 
 ## Как играть
@@ -30,15 +30,15 @@ ruby main.rb
 
 ## Requirements
 
-ruby 2.7.1
+- ruby 2.7.1
 
 
 
 ## How to install the game
 
-bundle install
+- `bundle install`
 
-ruby main.rb
+- `bundle exec ruby main.rb`
 
 
 
