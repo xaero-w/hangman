@@ -1,4 +1,4 @@
-# **Игра "Палачь" на языке Ruby**
+# **Игра "Палач" на языке Ruby**
 
 
 ## Требования
@@ -8,9 +8,9 @@
 
 ## Как установить игру
 
-- `bundle install`
+> bundle install
 
-- `bundle exec ruby main.rb`
+> bundle exec ruby main.rb
 
 
 ## Как играть
@@ -35,10 +35,11 @@
 
 
 ## How to install the game
+ 
+> bundle install
 
-- `bundle install`
+> bundle exec ruby main.rb
 
-- `bundle exec ruby main.rb`
 
 
 
